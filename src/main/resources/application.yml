@@ -1,14 +1,8 @@
-server.port: 8085
+server.port: 8086
 spring:
   data:
     mongodb:
       uri: mongodb+srv://digisherpa:MongoSherpa21@digisherpa.h80qy.mongodb.net/digisherpa?retryWrites=true&w=majority
-  rabbitmq:
-    host: 49.50.107.94
-    port: 5672
-    virtual-host: teamteach
-    username: admin
-    password: DigiSherpa21
 
 app:
   security:
@@ -23,8 +17,3 @@ app:
       keytype: shared
       signingsecret: fe80::6184:62f1:2b9e:5b8313:8666:1qaz
 
-exchange:
-  signup: signupexchange
-
-signup.routingkeys: event.createjournal
-listen.queue.names: event.createjournal
