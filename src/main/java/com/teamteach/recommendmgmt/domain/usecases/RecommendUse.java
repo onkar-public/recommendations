@@ -33,7 +33,7 @@ public class RecommendUse implements IRecommendMgmt{
 		Recommendation recommendation = recommendRepository.getRecommend((recommendCommand.getText()));
 		String message = "Problems with sleeping can affect the behaviour and attitude of a child. Click here for some ideas you might try.";
 		RecommendResponse response = new RecommendResponse(message);
-		if(recommendation == null){
+		if(recommendation != null){
 			return ObjectResponseDto.builder()
 									.success(true)
 									.message("Recommendation found successfully")

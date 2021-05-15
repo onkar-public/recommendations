@@ -14,7 +14,7 @@ import javax.validation.Valid;
 @RequestMapping("recommendations")
 public interface IRecommendResource {
 
-    @GetMapping("")
+    @PostMapping("")
     ResponseEntity<ObjectResponseDto> lookUpRecommendation(@RequestBody @Valid RecommendCommand recommendCommand); 
         
     @ApiIgnore
