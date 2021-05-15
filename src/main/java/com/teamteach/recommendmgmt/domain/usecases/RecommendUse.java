@@ -48,12 +48,7 @@ public class RecommendUse implements IRecommendMgmt{
 	}
 
 	@Override
-    public ObjectListResponseDto findCategories() {
-        Query query = new Query();
-        List<Category> categories = mongoTemplate.find(query, Category.class);
-        return new ObjectListResponseDto<>(
-                true,
-                "Categories retrieved successfully!",
-				categories);
+    public ObjectListResponseDto findCategories() {        
+        return recommendRepository.getCategories();
     }
 }
