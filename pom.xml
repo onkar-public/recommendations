@@ -11,9 +11,9 @@
 	</parent>
 	<groupId>teamteach</groupId>
 	<artifactId>recommendations</artifactId>
-	<version>TeamTeach-recommendations-v1.0</version>
-	<name>TeamTeach API recommendations</name>
-	<description>TeamTeach API recommendations</description>
+	<version>TeamTeach-Recommendations-v1.0</version>
+	<name>TeamTeach API Recommendations</name>
+	<description>TeamTeach API Recommendations</description>
 
 	<properties>
 		<java.version>11</java.version>
