@@ -20,7 +20,10 @@ public class RecommendUse implements IRecommendMgmt{
 		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
 		if (recommendations != null && !recommendations.isEmpty()) {
 			List<Suggestion> suggestions = recommendations.get(0).getSuggestions();
-			int oldIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
+			int oldIndex = 0;
+			if (recommendCommand.getSuggestionIndex() != null) {
+				oldIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
+			}
 			int newIndex = (oldIndex+1) % suggestions.size();
 			String suggestionIndex = String.valueOf(newIndex);
 			String suggestion = suggestions.get(newIndex).getSuggestion();
