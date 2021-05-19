@@ -16,5 +16,6 @@ public class RecommendResponse {
     private String recommendation;
     private String url;
     private String categoryId;
+    private String recommendationId;
     private String suggestionIndex;
 }

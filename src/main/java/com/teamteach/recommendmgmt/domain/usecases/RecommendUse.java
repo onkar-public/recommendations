@@ -19,6 +19,7 @@ public class RecommendUse implements IRecommendMgmt{
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand) {
 		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
 		if (recommendations != null && !recommendations.isEmpty()) {
+			String recommendationId = recommendations.get(0).getId();
 			List<Suggestion> suggestions = recommendations.get(0).getSuggestions();
 			int oldIndex = 0;
 			if (recommendCommand.getSuggestionIndex() != null) {
@@ -32,7 +33,7 @@ public class RecommendUse implements IRecommendMgmt{
 			return ObjectResponseDto.builder()
 									.success(true)
 									.message("Recommendation found successfully")
-									.object(new RecommendResponse(suggestion, url, categoryId, suggestionIndex))
+									.object(new RecommendResponse(suggestion, url, categoryId, recommendationId, suggestionIndex))
 									.build();
 		} else {
 			return ObjectResponseDto.builder()
