@@ -13,6 +13,8 @@ import com.teamteach.recommendmgmt.domain.models.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RecommendResponse {
-
     private String recommendation;
+    private String url;
+    private String categoryId;
+    private Integer theIndex;
 }

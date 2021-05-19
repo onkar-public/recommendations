@@ -16,4 +16,5 @@ import javax.validation.constraints.NotNull;
 public class RecommendCommand extends ValidatingCommand{
     @NotNull
     private String text;
+    private int theIndex;
 }

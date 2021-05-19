@@ -31,16 +31,16 @@ public class RecommendUse implements IRecommendMgmt{
     @Override
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand) {
 		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
-		String recommendation = "Problems with sleeping can affect the behaviour and attitude of a child. Click here for some ideas you might try.";
 		if (recommendations != null) {
-			recommendation = recommendations.get(0).getSuggestions().get(0).getSuggestion();
-		}
-		RecommendResponse response = new RecommendResponse(recommendation);
-		if(recommendation != null){
+			List<Suggestion> suggestions = recommendations.get(0).getSuggestions();
+			int newIndex = (recommendCommand.getTheIndex()+1) % suggestions.size();
+			String suggestion = suggestions.get(newIndex).getSuggestion();
+			String url = suggestions.get(newIndex).getUrl();
+			String categoryId = recommendations.get(0).getCategoryId();
 			return ObjectResponseDto.builder()
 									.success(true)
 									.message("Recommendation found successfully")
-									.object(response)
+									.object(new RecommendResponse(suggestion, url, categoryId, newIndex))
 									.build();
 		} else {
 			return ObjectResponseDto.builder()
