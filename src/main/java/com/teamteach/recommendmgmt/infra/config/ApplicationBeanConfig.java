@@ -15,11 +15,9 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 public class ApplicationBeanConfig {
 
     final IRecommendRepository recommendRepository;
-    final MongoTemplate mongoTemplate;
 
     @Bean("recommendMgmtSvc")
     IRecommendMgmt recommendMgmt() {
         return new RecommendUse(recommendRepository);
-        //return null;
     }
 }

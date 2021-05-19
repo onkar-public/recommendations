@@ -29,7 +29,7 @@ public class RecommendDAL  implements IRecommendRepository {
     }
 
     @Override
-    public ObjectListResponseDto getCategories() {
+    public ObjectListResponseDto<Category> getCategories() {
         Query query = new Query();
         List<Category> categories = mongoTemplate.find(query, Category.class);
         return new ObjectListResponseDto<>(
