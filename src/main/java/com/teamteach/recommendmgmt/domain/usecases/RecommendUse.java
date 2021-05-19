@@ -31,7 +31,7 @@ public class RecommendUse implements IRecommendMgmt{
     @Override
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand) {
 		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
-		if (recommendations != null) {
+		if (recommendations != null && !recommendations.isEmpty()) {
 			List<Suggestion> suggestions = recommendations.get(0).getSuggestions();
 			int newIndex = (recommendCommand.getTheIndex()+1) % suggestions.size();
 			String suggestion = suggestions.get(newIndex).getSuggestion();
