@@ -20,15 +20,12 @@ import java.util.*;
 
 @Document(collection = "recommendations")
 public class Recommendation {
-
     @Transient
         public static final String SEQUENCE_NAME = "recommendations_sequence";
-
     @Id
+    protected String id;
     protected String categoryId;
-    private String title;
-    private String colour; 
-    private boolean isParent;
-    private boolean isTeacher;
-    private List<Scope> scopes;   
+    private String word;
+    private String[] synonyms;
+    private List<Suggestion> suggestions;   
 }

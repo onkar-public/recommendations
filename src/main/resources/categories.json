@@ -1,0 +1,60 @@
+{
+    "_id" : "1",
+    "title" : "Outbust",
+    "colour" : "#FF6D7A",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "2",
+    "title" : "Making Progress",
+    "colour" : "#FCDBAE",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "3",
+    "title" : "Playing Up",
+    "colour" : "#F1B7CD",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "4",
+    "title" : "Tearful",
+    "colour" : "#B6D0D8",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "5",
+    "title" : "Sad/Down",
+    "colour" : "#9195B8",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "6",
+    "title" : "Agitated",
+    "colour" : "#C484A4",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "7",
+    "title" : "Worrying",
+    "colour" : "#BFA8CB",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "8",
+    "title" : "Overwhelmed",
+    "colour" : "#FFEFB5",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "9",
+    "title" : "Refusal",
+    "colour" : "#ADD8E6",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}
+{
+    "_id" : "0",
+    "title" : "Success",
+    "colour" : "#DDE2AD",
+    "_class" : "com.teamteach.journalmgmt.domain.models.Category"
+}

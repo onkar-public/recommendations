@@ -33,7 +33,7 @@ public class RecommendUse implements IRecommendMgmt{
 		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
 		String recommendation = "Problems with sleeping can affect the behaviour and attitude of a child. Click here for some ideas you might try.";
 		if (recommendations != null) {
-			//recommendation = recommendations.get(0).
+			recommendation = recommendations.get(0).getSuggestions().get(0).getSuggestion();
 		}
 		RecommendResponse response = new RecommendResponse(recommendation);
 		if(recommendation != null){

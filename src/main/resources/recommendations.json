@@ -1,0 +1,1092 @@
+{
+    "_id" : "1",
+    "categoryId" : "1",
+    "word" : "Tantrum",
+    "synonyms" : [ 
+        "paddy", 
+        "meltdown", 
+        "hysterics", 
+        "frenzy", 
+        "hissy", 
+        "huff", 
+        "fit", 
+        "tantrums"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Emotional outbursts can often be signs that your child is feeling frustrated, tired or hungry. Think about when these tantrums happen to uncover the reason behind them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Problems with sleeping can affect your child’s behaviour and attitude. A regular bedtime and enough sleep helps them to feel more in control of their emotions. Find out tips about improving sleep here.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Tantrums can be embarrassing, especially when you’re in public. Stay calm and avoid getting upset or angry. Remember that tantrums are very common, and all parents have experienced them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you understand the cause of tantrums and look for patterns in your child’s behaviour. This will help you reduce the frequency and give you simple strategies to cope.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "2",
+    "categoryId" : "1",
+    "word" : "Shouting",
+    "synonyms" : [ 
+        "screaming", 
+        "yelling", 
+        "screeching", 
+        "jeer", 
+        "racket", 
+        "din", 
+        "pandemonium", 
+        "shriek"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children often shout when they’re struggling to cope with strong emotions, and it’s easy to start shouting back. By keeping your voice quiet, you can help them calm down.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "When your child is screaming, they won’t be able to process what you’re saying. Help them calm down first before talking about how they are feeling and the reasons behind it.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Giving attention to positive behaviours and ignoring negative ones is called ‘differential attention.’ This can be a successful strategy to deal with screaming and other difficult behaviour.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Talking to a coach can help you understand why your child is shouting and gives you useful strategies to use when your child is feeling angry.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "3",
+    "categoryId" : "1",
+    "word" : "Swearing",
+    "synonyms" : [ 
+        "cuss", 
+        "cursing", 
+        "boastful", 
+        "fuck", 
+        "vulgar", 
+        "obscenity", 
+        "profanity", 
+        "four letter word", 
+        "4 letter word", 
+        "coarse", 
+        "blasphemy", 
+        "smut", 
+        "smutty", 
+        "sleaze", 
+        "dirty word", 
+        "bad language"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children can swear when they’re feeling frustrated, angry, or to get our attention. Alternatively, they may copy words they’ve heard others use. Identifying why they are swearing can help us know deal with it.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child is swearing out of frustration, you can help by naming the emotion for them. They need to know it’s natural to feel this way sometimes, and you’re ready to listen.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Children can swear because they know they’ll get a big reaction. Try staying calm and ignoring it. Praise them when they speak politely and agree as a family what is acceptable language to use.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Talking to a coach can help you identify why your child is swearing. They will show you strategies to use when your child swears so you feel in control of the situation.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "4",
+    "categoryId" : "1",
+    "word" : "Temper",
+    "synonyms" : [ 
+        "mood", 
+        "bad temper", 
+        "foul", 
+        "hump", 
+        "strop", 
+        "grouch", 
+        "funk", 
+        "rage", 
+        "fury", 
+        "hissy", 
+        "fit", 
+        "hiss"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "We can all struggle at times with our emotions. These feelings drive our behaviours. It’s common for children to show us big reactions when they feel frustrated, angry or upset.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "When your child is in a temper, give them time to calm down before you try to talk about it. Pick a quiet time when they feel comfortable to discuss what happened.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "It can be hard to stay calm when our children are in a bad temper or being rude. Walk away for a few minutes to avoid shouting and get control your own emotions.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Speaking to a coach can help you find out why your child feels angry. They can share tips and ideas to help you deal with big, angry outbursts in a positive way.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "5",
+    "categoryId" : "1",
+    "word" : "Spitting",
+    "synonyms" : [ 
+        "spew", 
+        "coughing up", 
+        "gobbing", 
+        "gob", 
+        "hoicking", 
+        "spewing", 
+        "whizzing"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children sometimes spit for fun, or because it gets a big reaction from us. However, they may spit because they feel angry or frustrated and are struggling to express it.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If you react strongly to behaviour like spitting, it becomes a good way of getting your attention. Try ignoring it so they can see that this doesn’t work with you.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Children can spit when they feel angry. Name the emotion for them and explain that it’s OK to feel that way sometimes. Explain that spitting is not a good way of showing anger.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "You can work with a coach to discuss negative behaviours like spitting. They can help you understand the triggers behind this behaviour and explore what you can do to minimise it.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "6",
+    "categoryId" : "1",
+    "word" : "Screaming",
+    "synonyms" : [ 
+        "distressed", 
+        "high pitched"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children can struggle to cope with powerful feelings. It’s common for them to scream when they feel angry, upset or frustrated. Naming the emotion will help them recognise how they are feeling.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "When your child is screaming, focus on helping them to calm down by offering them comfort and reassurance. Show them strategies like taking deep breaths or counting to ten.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "When your child is calm, you can teach them ways to cope with difficult emotions without screaming. See our 'tips to help your child to calm' for support.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Speaking to a coach is a useful way to explore coping mechanisms you can teach your child to use instead of screaming. This will give them strategies to deal with strong emotions.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "7",
+    "categoryId" : "2",
+    "word" : "Better",
+    "synonyms" : [ 
+        "improve", 
+        "improving", 
+        "lift", 
+        "uplifting", 
+        "perfect", 
+        "grow", 
+        "ahead", 
+        "turn", 
+        "corner", 
+        "work hard", 
+        "recover", 
+        "mend"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "It’s a great feeling when you notice things are improving. Remember to take time to reflect on the positive changes and the difference they’ve made for your family.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Change doesn’t happen overnight. It takes lots of small steps with plenty of obstacles along the way. Stay positive and look at the progress you’re making.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Rather than expecting perfection, you can celebrate the small changes that have a positive impact on your family. Look back to identify what is making the difference and feel proud of your progress.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you plan the positive changes you want to make. They help you identify and celebrate your successes and offer you support along the way.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "8",
+    "categoryId" : "2",
+    "word" : "Improving",
+    "synonyms" : [ 
+        "better", 
+        "calmer", 
+        "good day"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "It's important to recognise progress, however small it might feel. Talk to your child about the positive things they are doing and celebrate your success.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "How do you recognise positive behaviour? See 'Catch me being good' to find useful techniques you can use with your child to spot and reward the positive behaviours you want to encourage.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "It's important to look after ourselves. Celebrate the small wins and take some time out when things get tough. Remember, 'you can't pour from an empty cup.'",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Coaching sessions help you identify changes you want to make. Your coach will give you the encouragement, skills and strategies you need to improve behaviour and build strong family bonds.   ",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "9",
+    "categoryId" : "3",
+    "word" : "Angry",
+    "synonyms" : [ 
+        "bitter", 
+        "rude", 
+        "mad", 
+        "violent", 
+        "furious", 
+        "wild", 
+        "irate", 
+        "livid", 
+        "incensed", 
+        "resentful", 
+        "irritated", 
+        "maddened", 
+        "aggravated", 
+        "cross", 
+        "netted", 
+        "pissed off", 
+        "seething", 
+        "worked up", 
+        "angered", 
+        "hopping", 
+        "huffy", 
+        "ticked off", 
+        "ballistic", 
+        "frenzy", 
+        "scowling"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "When children feel angry, they can struggle to know how to cope with it. Helping them name the emotion and learn ways to calm down can help reduce emotional outbursts.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "You can show your child how to deal with angry feelings by modelling positive behaviour to them. Talk about how you are feeling and what you are doing to calm yourself down.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "It takes a long time to calm down when we’re feeling angry. Wait before trying to talk to your child about the reasons behind their anger and ideas for how to calm down.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Speaking with a coach can help you understand why your child is feeling angry. It will give you strategies you can use to help them recognise and cope with these difficult emotions.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "10",
+    "categoryId" : "3",
+    "word" : "Surly",
+    "synonyms" : [ 
+        "bad tempered", 
+        "crabby", 
+        "cantankerous", 
+        "cranky", 
+        "narky", 
+        "gruff", 
+        "grumpy", 
+        "irritable", 
+        "sulky", 
+        "curttesty", 
+        "crabby", 
+        "cross", 
+        "moody", 
+        "prickly", 
+        "pouty", 
+        "tetchy", 
+        "pouting", 
+        "churlish", 
+        "touchy", 
+        "disrespectful"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Sometimes children show us they’re in a bad mood. Find a happy and relaxed time to talk about it with them. Encourage them to discuss their feelings without pressurising them to talk.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Do you notice that your child’s bad temper always happens at a certain time? Keep track of their mood to see if you can spot particular triggers like hunger or tiredness.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If you notice your child is withdrawing from their friends and family and seems uninterested in their usual activities, it could be a sign that you need to seek further help.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Talking with a coach can help you identity the reasons behind your child’s mood swings. They can show you communication strategies to encourage your child to talk about their feelings.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "11",
+    "categoryId" : "3",
+    "word" : "Naughty",
+    "synonyms" : [ 
+        "answering back", 
+        "cheek", 
+        "protest"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children can misbehave for a variety of reasons. They may just be feeling hungry, tired, or bored. Alternatively, children show negative behaviours to get attention and to feel a connection with us.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Your child may misbehave to get your attention. Try ignoring negative behaviours and praising the positive ones. This will teach your child how to get attention in a good way.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Every family has their own idea about what ‘good’ behaviour looks like. Talking as a family about what is, and isn’t, acceptable will help you agree family rules you can all follow.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Every behaviour is communication. Talking to a coach can help you understand why your child is misbehaving and explore practical strategies you can use to reduce negative behaviours.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "12",
+    "categoryId" : "3",
+    "word" : "Lying",
+    "synonyms" : [ 
+        "lie", 
+        "cap", 
+        "shade", 
+        "fibs"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children can lie to avoid getting into trouble or get something they want. Encourage your child to be honest by helping them understand the consequences of lying and praising them for telling the truth.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child deliberately lies, find a quiet time to talk about how it makes you feel. Help them see the impact their lie has on other people and the consequences of lying.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Avoid labelling your child as ‘a liar’. It can encourage them to lie more often. Instead, you can show surprise when they lie and remind them how honest they usually are.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you unpick your child’s behaviour to find out why they lie and what you can do when you know they’re lying.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "13",
+    "categoryId" : "4",
+    "word" : "Crying",
+    "synonyms" : [ 
+        "tearful", 
+        "teary", 
+        "sobbing", 
+        "upset", 
+        "wailing", 
+        "weeping", 
+        "weepy", 
+        "blubbering", 
+        "blubbing", 
+        "bawling", 
+        "howling", 
+        "close to tears"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Crying is a natural reaction to physical pain, but children also cry when they feel embarrassed, angry, upset or frustrated. Knowing how they are feeling can help you comfort them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Something that seems trivial to us as adults can feel very significant to a child. If you tell your child to “stop crying” you send out a message that their feelings aren’t important.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child cries a lot, offer comfort and support until they are calm. Then talk about what made them feel this way to uncover the feelings behind their tears.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "A coach can help you learn about your child’s emotions and why they seem to cry a lot. You can learn techniques to understand how they’re feeling and help them stop crying.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "14",
+    "categoryId" : "5",
+    "word" : "Withdrawn",
+    "synonyms" : [ 
+        "quiet", 
+        "introverted", 
+        "aloof", 
+        "remote", 
+        "unsociable", 
+        "distant", 
+        "recluse", 
+        "standoffish", 
+        "uninterested", 
+        "listless", 
+        "sullen", 
+        "moping", 
+        "morose", 
+        "troubled", 
+        "crap"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "If your child seems withdrawn, they may be quieter than usual and uninterested in their favourite activities. Finding relaxed times to talk gives them the opportunity to open up about their feelings.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your previously happy child suddenly seems withdrawn, it could be a sign that there’s something wrong. Talk to them about what you’ve noticed and encourage them to share any worries.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child seems withdrawn and you’ve noticed a change in their eating or sleeping habits, it could be a sign that they’re anxious or depressed. Reach out for help if you’re feeling worried.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you explore your child’s emotions to understand why they seem withdrawn and show you ways to support them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "15",
+    "categoryId" : "5",
+    "word" : "Sad",
+    "synonyms" : [ 
+        "miserable", 
+        "unhappy", 
+        "dejected", 
+        "disheartened", 
+        "upset", 
+        "shit", 
+        "demoralised", 
+        "heartbroken", 
+        "desolate", 
+        "despondent", 
+        "disconsolate", 
+        "dispirited", 
+        "down", 
+        "forlorn", 
+        "glum", 
+        "hurt", 
+        "sullen", 
+        "troubled", 
+        "down in the dumps", 
+        "down in the mouth", 
+        "gloomy", 
+        "doldrums", 
+        "low", 
+        "morbid", 
+        "inconsolable", 
+        "morbid", 
+        "disappointed"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "It’s common for children to feel sad sometimes. Things that seem trivial to us can be hugely important to them. Talk about what is upsetting them without minimising how they feel.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "It’s easy for us to try to ‘fix’ children’s sadness. Instead of trying to solve the problem, encourage them to talk about how they’re feeling and why they might feel this way.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Help your child focus on the positives rather than dwell on the negative parts of their day. Ask them to about the best thing that happened to them and share your own positive moments.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Talking to a coach can help you better understand your child’s feelings and find ways to help them deal with powerful emotions like sadness.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "16",
+    "categoryId" : "5",
+    "word" : "Stress",
+    "synonyms" : [ 
+        "strain", 
+        "pressure", 
+        "tension", 
+        "distress", 
+        "nervous", 
+        "tense", 
+        "dread", 
+        "apprehensive", 
+        "fear", 
+        "tight", 
+        "drawn", 
+        "wired"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children often show physical symptoms when they’re feeling stressed. Bed-wetting, sleep problems, stomach aches and even leg pains can be signs they’re experiencing stress or anxiety.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If you think your child is stressed, tell them you’ve noticed something is bothering them and label the emotion so they understand what it is they’re feeling.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Remember that feeling stressed sometimes is normal. You can support your child when they feel stressed by talking together about potential solutions to help them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Coaching sessions help you identify changes you want to make. Your coach will give you the encouragement, skills and strategies you need to improve behaviour and build strong family bonds.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "17",
+    "categoryId" : "5",
+    "word" : "Depressed",
+    "synonyms" : [ 
+        "lethargic", 
+        "drained"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Depression doesn’t just affect adults; children can feel this way too. It can be caused by a single event, like a bereavement, or a combination of factors.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If you think your child is depressed, talk to them about why they’re feeling this way. They might not want to speak with you, but you can show them you’re interested and available.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Periods of feeling down are normal, but if your child seems depressed all the time, talk to their teachers and people who know them best. You may need to seek further help.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Coaching sessions can help you understand why your child might be feeling low or depressed. You can learn strategies to encourage them to open up about their feeling with you.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "18",
+    "categoryId" : "6",
+    "word" : "Agitated",
+    "synonyms" : [ 
+        "frenzied", 
+        "fidgit", 
+        "sit still", 
+        "simmering", 
+        "on-edge", 
+        "flustered", 
+        "ruffled", 
+        "rattled", 
+        "bothered", 
+        "frantic", 
+        "antsy", 
+        "flapping", 
+        "angsty", 
+        "twitchy", 
+        "state", 
+        "spin", 
+        "flutter", 
+        "hysteric", 
+        "fraught", 
+        "crazed", 
+        "berserk", 
+        "desperate", 
+        "annimated", 
+        "boisterous", 
+        "energetic", 
+        "jittery", 
+        "flighty", 
+        "wound up", 
+        "uptight", 
+        "ruffled"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children often feel agitated and annoyed when they can’t have something they want or are asked to do something they don’t want to do. They may appear restless or easily irritated."
+        }, 
+        {
+            "suggestion" : "Children can feel agitated when they are tired or over-excited. Regular bedtimes and reducing screen time before bed can help them unwind and relax."
+        }, 
+        {
+            "suggestion" : "Children can feel agitated in busy and noisy environments or when they’re feeling worried about something. Try taking your child to a quiet space to calm down before talking about what is upsetting them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you identify why your child is feeling agitated and ways you can support them. You can find triggers for this behaviour and plan simple solutions.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "19",
+    "categoryId" : "6",
+    "word" : "Pacing",
+    "synonyms" : [ 
+        "marching", 
+        "mooching", 
+        "striding", 
+        "pounding", 
+        "prowling", 
+        "back and forth", 
+        "parading", 
+        "stomping"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Pacing backwards and forwards, and other repetitive behaviours like arm flapping and rocking may be a sign that your child’s feeling anxious, stressed or frustrated about something.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child is pacing, don’t tell them to stop; they may be feeling anxious. Try re-directing their attention or distracting them. Choose a calm moment to talk about how they’re feeling.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "For some children, pacing backwards and forwards becomes a repetitive behaviour. It helps them deal with feelings of frustration and has a soothing effect.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Speaking with a coach gives you an opportunity to discuss any repetitive behaviours your child is showing and understand the feelings and emotions behind them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "20",
+    "categoryId" : "6",
+    "word" : "Lack of attention",
+    "synonyms" : [ 
+        "distracted", 
+        "not listening"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Children can appear distracted when they’re feeling anxious or stressed. Talking with them about their worries can help you uncover any problems and help them find solutions.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Sometimes there can be a physical reason why your child is struggling to pay attention. If they are tired or hungry, it can have a big impact on their ability to concentrate.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child struggles to concentrate and appears distracted, try talking to their teacher to see if they see the same behaviour at school.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child suddenly appears distracted and struggles to concentrate, talking with a coach can help you uncover any problems and find ways to address them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "21",
+    "categoryId" : "7",
+    "word" : "Scared",
+    "synonyms" : [ 
+        "afraid", 
+        "fearful", 
+        "terrified", 
+        "panicky", 
+        "intimidated", 
+        "petrified", 
+        "scared stiff", 
+        "wits", 
+        "terror", 
+        "horror", 
+        "jumpy", 
+        "spooked", 
+        "bricking", 
+        "panic"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Pacing backwards and forwards, and other repetitive behaviours like arm flapping and rocking may be a sign that your child’s feeling anxious, stressed or frustrated about something.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child is pacing, don’t tell them to stop; they may be feeling anxious. Try re-directing their attention or distracting them. Choose a calm moment to talk about how they’re feeling.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "For some children, pacing backwards and forwards becomes a repetitive behaviour. It helps them deal with feelings of frustration and has a soothing effect.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Speaking with a coach gives you an opportunity to discuss any repetitive behaviours your child is showing and understand the feelings and emotions behind them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "22",
+    "categoryId" : "7",
+    "word" : "Concerned",
+    "synonyms" : [ 
+        "worried", 
+        "worry"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "If your child seems overly concerned about something, talk to them about how they’re feeling. Label the emotion for them and explore why they feel worried. Just talking about a problem can help.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child is feeling concerned or worried about something, help them find a solution rather than solving the problem yourself. This helps them learn to be confident and independent.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Small worries can feel hugely important to your child. Help them put their concerns in perspective by discussing what is likely to happen and showing them that most problems are solvable.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If your child often feels worried or anxious, speaking with a coach can help you unpick why they are feeling this way and develop strategies to help them cope with these emotions.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "23",
+    "categoryId" : "8",
+    "word" : "Exhausted",
+    "synonyms" : [ 
+        "knackered", 
+        "tired", 
+        "drained", 
+        "spent", 
+        "bushed", 
+        "weary", 
+        "panting", 
+        "pooped", 
+        "puffed", 
+        "shattered", 
+        "frazzled", 
+        "sapped", 
+        "beaten", 
+        "done", 
+        "shot", 
+        "zonked", 
+        "fried", 
+        "whacked", 
+        "kaput", 
+        "flagging", 
+        "drained", 
+        "empty", 
+        "weak", 
+        "sluggish", 
+        "wasted"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "It’s common for children, and adults, to have times when they feel tired or sluggish. Having a regular bedtime, getting enough sleep, and reducing screen time before bed can really help.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "The food we eat impacts our energy levels. If you use sugar as a quick fix when you’re tired, it soon wears off. Healthy snacks are a better option.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Exercise is a great way to boost your energy levels if you often feel exhausted. It also gives you an opportunity to prioritise your own personal wellbeing.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Everything feels more difficult when you’re tired. Speaking with a coach can help you unpick problems and prioritise actions, so you feel more positive and in control.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "24",
+    "categoryId" : "8",
+    "word" : "Concerned",
+    "synonyms" : [ 
+        "at wits end", 
+        "can't go on", 
+        "too much"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Parenting is an exhausting job! It’s important that you take time for yourself. If you’re feeling overwhelmed, it’s time to think about your own wellbeing needs and make these a priority.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "There’s a lot of pressure on parents to be ‘perfect,’ but really there’s no such thing as perfection. Parenting is not a competition, and it’s important to balance your child’s needs with own wellbeing.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "There are lots of ways you can support your own wellbeing. Taking a walk, meeting a friend for coffee, and having a relaxing bath are just a few options to recharge and relax.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If you feel like you can’t cope, talking with a coach can help. They’ll discuss how you’re feeling and offer practical ideas to help you feel more in control again.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "25",
+    "categoryId" : "8",
+    "word" : "Exhausted",
+    "synonyms" : [ 
+        "sorry", 
+        "sheepish", 
+        "humiliated", 
+        "upset", 
+        "shamed", 
+        "loathhangdog", 
+        "downcast", 
+        "defeated", 
+        "browbeaten", 
+        "cringing", 
+        "furtive", 
+        "sneaking", 
+        "cowering", 
+        "cast down"
+    ],
+    "suggestions" : [],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "26",
+    "categoryId" : "8",
+    "word" : "Insecure",
+    "synonyms" : [ 
+        "unconfident", 
+        "retiring", 
+        "doubt", 
+        "unassertive", 
+        "meek", 
+        "self conscience"
+    ],
+    "suggestions" : [],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "27",
+    "categoryId" : "9",
+    "word" : "Won't",
+    "synonyms" : [ 
+        "refuse", 
+        "reject", 
+        "spurn", 
+        "rebuff", 
+        "snub", 
+        "no", 
+        "opposite"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "It can feel frustrating when your child doesn’t do as they’re asked. You might feel like they say ‘no’ automatically. Refusing to do things is a very common behaviour in children.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "You can talk to your child about how it makes you feel when they don’t do as you ask. This will help them understand your point of view and develop empathy.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Children are more likely to do what we ask if they know why they must do it. Giving them a reason helps them to understand why the task is important.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Speaking with a coach can help you tackle a range of challenging behaviours including refusing or ignoring your instructions. They can also help with specific issues like school refusal. ",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "28",
+    "categoryId" : "9",
+    "word" : "Ignore",
+    "synonyms" : [ 
+        "miss", 
+        "skip", 
+        "unheed", 
+        "avoid", 
+        "evade", 
+        "reject", 
+        "heed", 
+        "exclude", 
+        "deaf ear", 
+        "blind eye"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "We expect our children to listen to us, but we also need to listen to them. Making eye contact and giving them our full attention shows them we’re interested in what they’re saying.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "To help your child ‘tune in’ to what you’re saying, try starting your instruction with their name. This will make sure you’ve got their full attention before you start speaking.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "If you notice your child doesn’t seem to hear you, especially when there’s a lot of background noise, it’s worth having their hearing checked.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you tackle challenging behaviours. If your child ignores or refuses to do as you ask, they can give you helpful strategies to use.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "29",
+    "categoryId" : "10",
+    "word" : "Happy",
+    "synonyms" : [ 
+        "cheerful", 
+        "glad", 
+        "joy", 
+        "fantastic", 
+        "over the moon", 
+        "tickled", 
+        "cock a hoop", 
+        "beside oneself", 
+        "two tails", 
+        "happy as a larry", 
+        "wig"
+    ],
+    "suggestions" : [ 
+        {
+            "suggestion" : "Emotional outbursts can often be signs that your child is feeling frustrated, tired or hungry. Think about when these tantrums happen to uncover the reason behind them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Problems with sleeping can affect your child’s behaviour and attitude. A regular bedtime and enough sleep helps them to feel more in control of their emotions. Find out tips about improving sleep here.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Tantrums can be embarrassing, especially when you’re in public. Stay calm and avoid getting upset or angry. Remember that tantrums are very common, and all parents have experienced them.",
+            "url" : "https://abc.def.com/best-way.html"
+        }, 
+        {
+            "suggestion" : "Working with a coach can help you understand the cause of tantrums and look for patterns in your child’s behaviour. This will help you reduce the frequency and give you simple strategies to cope.",
+            "url" : "https://abc.def.com/best-way.html"
+        }
+    ],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "30",
+    "categoryId" : "10",
+    "word" : "Proud",
+    "synonyms" : [ 
+        "please", 
+        "thrilled", 
+        "chuffed", 
+        "fire"
+    ],
+    "suggestions" : [],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}
+
+{
+    "_id" : "31",
+    "categoryId" : "10",
+    "word" : "Won",
+    "synonyms" : [ 
+        "awarded", 
+        "achieved"
+    ],
+    "suggestions" : [],
+    "_class" : "com.teamteach.journalmgmt.domain.models.Recommendation"
+}

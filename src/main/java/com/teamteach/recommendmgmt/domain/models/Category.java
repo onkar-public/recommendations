@@ -18,12 +18,10 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
-@Document(collection = "recommendations")
+@Document(collection = "categories")
 public class Category {
-
     @Transient
-        public static final String SEQUENCE_NAME = "recommendations_sequence";
-
+        public static final String SEQUENCE_NAME = "categories_sequence";
     @Id
     protected String categoryId;
     private String title;
