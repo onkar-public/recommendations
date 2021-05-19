@@ -30,9 +30,12 @@ public class RecommendUse implements IRecommendMgmt{
 
     @Override
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand) {
-		Recommendation recommendation = recommendRepository.getRecommend((recommendCommand.getText()));
-		String message = "Problems with sleeping can affect the behaviour and attitude of a child. Click here for some ideas you might try.";
-		RecommendResponse response = new RecommendResponse(message);
+		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
+		String recommendation = "Problems with sleeping can affect the behaviour and attitude of a child. Click here for some ideas you might try.";
+		if (recommendations != null) {
+			//recommendation = recommendations.get(0).
+		}
+		RecommendResponse response = new RecommendResponse(recommendation);
 		if(recommendation != null){
 			return ObjectResponseDto.builder()
 									.success(true)

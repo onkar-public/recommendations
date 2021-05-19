@@ -30,5 +30,5 @@ public class Recommendation {
     private String colour; 
     private boolean isParent;
     private boolean isTeacher;
-    private List<Words> scopes;   
+    private List<Scope> scopes;   
 }
