@@ -6,5 +6,5 @@ import java.util.*;
 
 public interface IRecommendRepository {
    List<Recommendation> getRecommend(String[] words);
-   ObjectListResponseDto getCategories();
+   ObjectListResponseDto<Category> getCategories();
 }

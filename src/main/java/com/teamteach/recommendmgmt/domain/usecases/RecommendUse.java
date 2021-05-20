@@ -1,26 +1,31 @@
 package com.teamteach.recommendmgmt.domain.usecases;
 
-import com.teamteach.recommendmgmt.domain.command.*;
-import com.teamteach.recommendmgmt.domain.ports.in.*;
-import com.teamteach.recommendmgmt.domain.models.*;
-import com.teamteach.recommendmgmt.domain.ports.out.*;
-import com.teamteach.recommendmgmt.domain.responses.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.*;
 
-import lombok.RequiredArgsConstructor;
+import com.teamteach.recommendmgmt.domain.command.RecommendCommand;
+import com.teamteach.recommendmgmt.domain.models.Category;
+import com.teamteach.recommendmgmt.domain.models.Recommendation;
+import com.teamteach.recommendmgmt.domain.models.Suggestion;
+import com.teamteach.recommendmgmt.domain.ports.in.IRecommendMgmt;
+import com.teamteach.recommendmgmt.domain.ports.out.IRecommendRepository;
+import com.teamteach.recommendmgmt.domain.responses.ObjectListResponseDto;
+import com.teamteach.recommendmgmt.domain.responses.ObjectResponseDto;
+import com.teamteach.recommendmgmt.domain.responses.RecommendResponse;
 
-@RequiredArgsConstructor
 public class RecommendUse implements IRecommendMgmt{
 
-    final IRecommendRepository recommendRepository;
+	@Autowired
+    private IRecommendRepository recommendRepository;
 
     @Override
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand) {
 		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
 		if (recommendations != null && !recommendations.isEmpty()) {
-			String recommendationId = recommendations.get(0).getId();
-			List<Suggestion> suggestions = recommendations.get(0).getSuggestions();
+			Recommendation recommendation = recommendations.get(0);
+			String recommendationId = recommendation.getId();
+			List<Suggestion> suggestions = recommendation.getSuggestions();
 			int oldIndex = 0;
 			if (recommendCommand.getSuggestionIndex() != null) {
 				oldIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
@@ -29,7 +34,7 @@ public class RecommendUse implements IRecommendMgmt{
 			String suggestionIndex = String.valueOf(newIndex);
 			String suggestion = suggestions.get(newIndex).getSuggestion();
 			String url = suggestions.get(newIndex).getUrl();
-			String categoryId = recommendations.get(0).getCategoryId();
+			String categoryId = recommendation.getCategoryId();
 			return ObjectResponseDto.builder()
 									.success(true)
 									.message("Recommendation found successfully")

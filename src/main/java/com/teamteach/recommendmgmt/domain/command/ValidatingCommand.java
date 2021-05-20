@@ -12,10 +12,6 @@ public abstract class ValidatingCommand <T> {
         validator = factory.getValidator();
     }
 
-    /**
-     * Evaluates all javax Validations on the attributes of this
-     * instance. Any class who needs can override
-     */
     protected void validateSelf() {
         Set<ConstraintViolation<T>> violations = validator.validate((T) this);
         if (!violations.isEmpty()) {

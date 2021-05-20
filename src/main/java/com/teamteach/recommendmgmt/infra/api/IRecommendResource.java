@@ -1,11 +1,9 @@
 package com.teamteach.recommendmgmt.infra.api;
 
 import com.teamteach.recommendmgmt.domain.command.*;
-import com.teamteach.recommendmgmt.domain.models.*;
+import com.teamteach.recommendmgmt.domain.models.Category;
 import com.teamteach.recommendmgmt.domain.responses.*;
-import com.teamteach.recommendmgmt.domain.usecases.*;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import springfox.documentation.annotations.ApiIgnore;
 
@@ -19,5 +17,5 @@ public interface IRecommendResource {
         
     @ApiIgnore
     @GetMapping("/categories")
-    ResponseEntity<ObjectListResponseDto> findCategories();
+    ResponseEntity<ObjectListResponseDto<Category>> findCategories();
 }

@@ -5,9 +5,9 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import lombok.EqualsAndHashCode;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.*;
@@ -17,7 +17,6 @@ import java.util.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Document(collection = "recommendations")
 public class Recommendation {
     @Transient
@@ -25,7 +24,12 @@ public class Recommendation {
     @Id
     protected String id;
     protected String categoryId;
+    
+    @TextIndexed(weight=2)
     private String word;
+    
+    @TextIndexed
     private String[] synonyms;
+
     private List<Suggestion> suggestions;   
 }

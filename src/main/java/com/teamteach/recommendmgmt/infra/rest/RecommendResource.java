@@ -31,7 +31,7 @@ class RecommendResource extends AbstractAppController implements IRecommendResou
 
     @Override
     @ApiOperation(value = "Finds categories", authorizations = { @Authorization(value="jwtToken") })
-    public ResponseEntity<ObjectListResponseDto> findCategories() {
+    public ResponseEntity<ObjectListResponseDto<Category>> findCategories() {
         return ResponseEntity.ok(recommendMgmt.findCategories());
     }
 }

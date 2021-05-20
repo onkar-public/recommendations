@@ -4,6 +4,8 @@ import com.teamteach.commons.security.JwtTokenValidatorFilter;
 import com.teamteach.commons.security.authentication.IAuthenticationProviderFactory;
 import com.teamteach.commons.security.jwt.JwtOperationsWrapperSvc;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -22,8 +24,11 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @EnableWebSecurity()
 public class AppSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    final JwtOperationsWrapperSvc jwtOperationsWrapperSvc;
-    final IAuthenticationProviderFactory authenticationProviderFactory;
+    @Autowired
+    private JwtOperationsWrapperSvc jwtOperationsWrapperSvc;
+
+    @Autowired
+    private IAuthenticationProviderFactory authenticationProviderFactory;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
