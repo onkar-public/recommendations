@@ -44,6 +44,7 @@ public class RecommendUse implements IRecommendMgmt{
 			return ObjectResponseDto.builder()
 									.success(false)
 									.message("Recommendation not found")
+									.object(new RecommendResponse("", "", "0", "", "0"))
 									.build();
 		}
 	}
