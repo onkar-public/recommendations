@@ -30,10 +30,15 @@ public class RecommendUse implements IRecommendMgmt{
 			if (recommendCommand.getSuggestionIndex() != null) {
 				oldIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
 			}
-			int newIndex = (oldIndex+1) % suggestions.size();
+			int newIndex = 0;
+			String suggestion = "";
+			String url = "";
+			if (suggestions.size() > 0) {
+				newIndex = (oldIndex+1) % suggestions.size();
+				suggestion = suggestions.get(newIndex).getSuggestion();
+				url = suggestions.get(newIndex).getUrl();
+			}
 			String suggestionIndex = String.valueOf(newIndex);
-			String suggestion = suggestions.get(newIndex).getSuggestion();
-			String url = suggestions.get(newIndex).getUrl();
 			String categoryId = recommendation.getCategoryId();
 			return ObjectResponseDto.builder()
 									.success(true)
