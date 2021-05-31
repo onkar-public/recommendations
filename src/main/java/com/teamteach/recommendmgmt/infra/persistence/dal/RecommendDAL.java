@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.TextCriteria;
 import org.springframework.data.mongodb.core.query.TextQuery;
@@ -26,6 +27,12 @@ public class RecommendDAL  implements IRecommendRepository {
         TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny(words);
 
         Query query = TextQuery.queryText(criteria);
+        return mongoTemplate.find(query, Recommendation.class);
+    }
+
+    @Override
+    public List<Recommendation> getRecommendations(String recommendationId) {
+        Query query = new Query(Criteria.where("_id").is(recommendationId));
         return mongoTemplate.find(query, Recommendation.class);
     }
 

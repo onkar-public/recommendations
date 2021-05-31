@@ -21,24 +21,30 @@ public class RecommendUse implements IRecommendMgmt{
 
     @Override
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand) {
-		List<Recommendation> recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
+		List<Recommendation> recommendations = null;
+		int oldIndex = 0;
+		int newIndex = -1;
+		if (recommendCommand.getRecommendationId() != null) {
+			recommendations = recommendRepository.getRecommendations(recommendCommand.getRecommendationId());
+			if (recommendCommand.getSuggestionIndex() != null) {
+				newIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
+			} else {
+				newIndex = 0;
+			}
+		} else {
+			recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
+			if (recommendCommand.getSuggestionIndex() != null) {
+				oldIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
+			}
+		}
 		if (recommendations != null && !recommendations.isEmpty()) {
 			Recommendation recommendation = recommendations.get(0);
 			String recommendationId = recommendation.getId();
 			List<Suggestion> suggestions = recommendation.getSuggestions();
-			int oldIndex = 0;
-			if (recommendCommand.getSuggestionIndex() != null) {
-				oldIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
-			}
-			int newIndex = 0;
-			String suggestion = "";
-			String url = "";
-			if (suggestions.size() > 0) {
-				newIndex = (oldIndex+1) % suggestions.size();
-				suggestion = suggestions.get(newIndex).getSuggestion();
-				url = suggestions.get(newIndex).getUrl();
-			}
+			if (newIndex == -1) newIndex = (oldIndex+1) % suggestions.size();
 			String suggestionIndex = String.valueOf(newIndex);
+			String suggestion = suggestions.get(newIndex).getSuggestion();
+			String url = suggestions.get(newIndex).getUrl();
 			String categoryId = recommendation.getCategoryId();
 			return ObjectResponseDto.builder()
 									.success(true)

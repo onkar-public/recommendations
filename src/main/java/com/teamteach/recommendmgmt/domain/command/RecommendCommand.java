@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Getter
 public class RecommendCommand extends ValidatingCommand{
-    @NotNull
     private String text;
+    private String recommendationId;
     private String suggestionIndex;
 }
