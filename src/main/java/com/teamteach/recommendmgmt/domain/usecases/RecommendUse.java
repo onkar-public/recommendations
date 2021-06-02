@@ -43,8 +43,12 @@ public class RecommendUse implements IRecommendMgmt{
 			List<Suggestion> suggestions = recommendation.getSuggestions();
 			if (newIndex == -1) newIndex = (oldIndex+1) % suggestions.size();
 			String suggestionIndex = String.valueOf(newIndex);
-			String suggestion = suggestions.get(newIndex).getSuggestion();
-			String url = suggestions.get(newIndex).getUrl();
+			String suggestion = "";
+			String url = "";
+			if (suggestions.size() > 0) {
+				suggestions.get(newIndex).getUrl();
+				suggestions.get(newIndex).getSuggestion();	
+			}
 			String categoryId = recommendation.getCategoryId();
 			return ObjectResponseDto.builder()
 									.success(true)
