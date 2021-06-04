@@ -12,6 +12,7 @@ import io.swagger.annotations.Authorization;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 
 @RestController
@@ -23,8 +24,9 @@ class RecommendResource extends AbstractAppController implements IRecommendResou
 
     @Override
     @ApiOperation(value = "Finds recommendations", authorizations = { @Authorization(value="jwtToken") })
-    public ResponseEntity<ObjectResponseDto> lookUpRecommendation(RecommendCommand recommendCommand) {
-        return ResponseEntity.ok(recommendMgmt.findRecommendation(recommendCommand));
+    public ResponseEntity<ObjectResponseDto> lookUpRecommendation(RecommendCommand recommendCommand, HttpHeaders headers) {
+        String token = headers.getFirst(HttpHeaders.AUTHORIZATION);
+        return ResponseEntity.ok(recommendMgmt.findRecommendation(recommendCommand, token));
     }
 
     @Override

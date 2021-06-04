@@ -5,8 +5,6 @@ import com.teamteach.recommendmgmt.domain.responses.ObjectListResponseDto;
 import com.teamteach.recommendmgmt.domain.responses.ObjectResponseDto;
 
 public interface IRecommendMgmt{
-    
-    ObjectResponseDto findRecommendation(RecommendCommand recommendCommand);
+    ObjectResponseDto findRecommendation(RecommendCommand recommendCommand, String token);
     ObjectListResponseDto findCategories();
-
 }

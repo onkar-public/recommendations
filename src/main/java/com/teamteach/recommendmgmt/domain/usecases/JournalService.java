@@ -19,9 +19,9 @@ public class JournalService {
 
     RestTemplate restTemplate = new RestTemplate();
 
-    public String getLastSuggestionIndex(String recoId, String accessToken){
+    public Integer getLastSuggestionIndex(String recoId, String accessToken){
         try {
-            String url = "https://ms.digisherpa.ai/journals/entry/lastSuggestion/"+recoId;
+            String url = "https://ms.digisherpa.ai/journals/entry/lastEntry/"+recoId;
             HttpHeaders headers = new HttpHeaders();
             headers.set("Authorization", accessToken); 
             headers.setContentType(MediaType.APPLICATION_JSON);
@@ -32,13 +32,13 @@ public class JournalService {
             if (success) {
                 JsonNode journalEntry = respoJsonNode.get("object");
                 String suggestionIndex = journalEntry.get("suggestionIndex").asText();
-                return suggestionIndex;
+                return Integer.valueOf(suggestionIndex);
             } else {
-                return "0";
+                return 0;
             }
         }
         catch (IOException e) {
-            return "0";
+            return 0;
         }
     }    
 }
