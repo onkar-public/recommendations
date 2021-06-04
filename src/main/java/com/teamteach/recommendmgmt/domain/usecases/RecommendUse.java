@@ -26,8 +26,9 @@ public class RecommendUse implements IRecommendMgmt{
 	public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand, String accessToken) {
 		List<Recommendation> recommendations = null;
 		int newIndex = -1;
-		if (recommendCommand.getRecommendationId() != null) {
-			recommendations = recommendRepository.getRecommendations(recommendCommand.getRecommendationId());
+		String recommendationId = recommendCommand.getRecommendationId();
+		if (recommendationId != null && !recommendationId.equals("0")) {
+			recommendations = recommendRepository.getRecommendations(recommendationId);
 			if (recommendCommand.getSuggestionIndex() != null) {
 				newIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
 			} else {
@@ -38,7 +39,7 @@ public class RecommendUse implements IRecommendMgmt{
 		}
 		if (recommendations != null && !recommendations.isEmpty()) {
 			Recommendation recommendation = recommendations.get(0);
-			String recommendationId = recommendation.getId();
+			recommendationId = recommendation.getId();
 			List<Suggestion> suggestions = recommendation.getSuggestions();
 			if (newIndex == -1) {
 				newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
