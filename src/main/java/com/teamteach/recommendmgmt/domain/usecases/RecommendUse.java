@@ -42,9 +42,13 @@ public class RecommendUse implements IRecommendMgmt{
 			Recommendation recommendation = recommendations.get(0);
 			recommendationId = recommendation.getId();
 			List<Suggestion> suggestions = recommendation.getSuggestions();
-			if (newIndex == -1 && suggestions.size() > 0) {
-				newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
-				newIndex = (newIndex+1) % suggestions.size();
+			if (newIndex == -1) {
+				if (suggestions.size() > 0) {
+					newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
+					newIndex = (newIndex+1) % suggestions.size();	
+				} else {
+					newIndex = 0;
+				}
 			}
 			String suggestionIndex = String.valueOf(newIndex);
 			String suggestion = "";
