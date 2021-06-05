@@ -6,7 +6,6 @@ import com.teamteach.recommendmgmt.domain.responses.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import springfox.documentation.annotations.ApiIgnore;
 
 import javax.validation.Valid;
 
