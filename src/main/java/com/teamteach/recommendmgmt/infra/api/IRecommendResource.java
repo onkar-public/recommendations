@@ -16,7 +16,6 @@ public interface IRecommendResource {
     @PostMapping("")
     ResponseEntity<ObjectResponseDto> lookUpRecommendation(@RequestBody @Valid RecommendCommand recommendCommand, @RequestHeader HttpHeaders headers); 
         
-    @ApiIgnore
     @GetMapping("/categories")
     ResponseEntity<ObjectListResponseDto<Category>> findCategories();
 }
