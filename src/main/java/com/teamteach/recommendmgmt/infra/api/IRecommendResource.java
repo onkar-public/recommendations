@@ -17,4 +17,7 @@ public interface IRecommendResource {
         
     @GetMapping("/categories")
     ResponseEntity<ObjectListResponseDto<Category>> findCategories();
+
+    @GetMapping("/getAll")
+    ResponseEntity<ObjectListResponseDto<RecommendationDashboardResponse>> getAllRecommendations();
 }

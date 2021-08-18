@@ -5,6 +5,7 @@ import com.teamteach.recommendmgmt.domain.models.Category;
 import com.teamteach.recommendmgmt.domain.ports.in.IRecommendMgmt;
 import com.teamteach.recommendmgmt.domain.responses.ObjectListResponseDto;
 import com.teamteach.recommendmgmt.domain.responses.ObjectResponseDto;
+import com.teamteach.recommendmgmt.domain.responses.RecommendationDashboardResponse;
 import com.teamteach.recommendmgmt.infra.api.IRecommendResource;
 import com.teamteach.recommendmgmt.shared.AbstractAppController;
 import io.swagger.annotations.ApiOperation;
@@ -33,5 +34,11 @@ class RecommendResource extends AbstractAppController implements IRecommendResou
     @ApiOperation(value = "Finds categories", authorizations = { @Authorization(value="jwtToken") })
     public ResponseEntity<ObjectListResponseDto<Category>> findCategories() {
         return ResponseEntity.ok(recommendMgmt.findCategories());
+    }
+
+    @Override
+    @ApiOperation(value = "Finds categories", authorizations = { @Authorization(value="jwtToken") })
+    public ResponseEntity<ObjectListResponseDto<RecommendationDashboardResponse>> getAllRecommendations() {
+        return ResponseEntity.ok(recommendMgmt.getAllRecommendations());
     }
 }
