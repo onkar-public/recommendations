@@ -90,7 +90,7 @@ public class RecommendUse implements IRecommendMgmt{
 		public ObjectResponseDto getRecommendation(String recommendationId) {
 			return ObjectResponseDto.builder()
                     .success(true)
-                    .message("Recommedation retrieved!")
+                    .message("Recommendation retrieved!")
                     .object(null)
                     .build();
 		}
