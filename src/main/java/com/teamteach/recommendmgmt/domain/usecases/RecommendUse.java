@@ -82,7 +82,16 @@ public class RecommendUse implements IRecommendMgmt{
 		public ObjectListResponseDto<RecommendationDashboardResponse> getAllRecommendations() {
 			return new ObjectListResponseDto<RecommendationDashboardResponse>(
                     true, 
-                    "Courses Dashboard retrieved successfully!", 
+                    "All recommendations retrieved successfully!", 
                     null);
+		}
+
+	@Override
+		public ObjectResponseDto getRecommendation(String recommendationId) {
+			return ObjectResponseDto.builder()
+                    .success(true)
+                    .message("Recommedation retrieved!")
+                    .object(null)
+                    .build();
 		}
 }

@@ -37,8 +37,14 @@ class RecommendResource extends AbstractAppController implements IRecommendResou
     }
 
     @Override
-    @ApiOperation(value = "Finds categories", authorizations = { @Authorization(value="jwtToken") })
+    @ApiOperation(value = "Finds all recommendations", authorizations = { @Authorization(value="jwtToken") })
     public ResponseEntity<ObjectListResponseDto<RecommendationDashboardResponse>> getAllRecommendations() {
         return ResponseEntity.ok(recommendMgmt.getAllRecommendations());
+    }
+
+    @Override
+    @ApiOperation(value = "Finds all recommendations", authorizations = { @Authorization(value="jwtToken") })
+    public ResponseEntity<ObjectResponseDto> getRecommendation(String recommendationId) {
+        return ResponseEntity.ok(recommendMgmt.getRecommendation(recommendationId));
     }
 }

@@ -20,4 +20,7 @@ public interface IRecommendResource {
 
     @GetMapping("/getAll")
     ResponseEntity<ObjectListResponseDto<RecommendationDashboardResponse>> getAllRecommendations();
+
+    @GetMapping("/get/{recommendationId}")
+    ResponseEntity<ObjectResponseDto> getRecommendation(@PathVariable String recommendationId);
 }

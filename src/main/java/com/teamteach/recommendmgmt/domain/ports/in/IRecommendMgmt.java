@@ -10,4 +10,5 @@ public interface IRecommendMgmt{
     ObjectResponseDto findRecommendation(RecommendCommand recommendCommand, String token);
     ObjectListResponseDto<Category> findCategories();
     ObjectListResponseDto<RecommendationDashboardResponse> getAllRecommendations();
+    ObjectResponseDto getRecommendation(String id);
 }
