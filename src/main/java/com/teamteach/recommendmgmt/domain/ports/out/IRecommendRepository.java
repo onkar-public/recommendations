@@ -9,4 +9,5 @@ public interface IRecommendRepository {
    List<Recommendation> getRecommendations(String recommendationId);
    ObjectListResponseDto<Category> getCategories();
    List<Recommendation> getAllRecommendations();
+   Recommendation getRecommendation(String recommendationId);
 }

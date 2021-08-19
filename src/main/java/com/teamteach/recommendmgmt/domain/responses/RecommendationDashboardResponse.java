@@ -13,6 +13,7 @@ import lombok.AllArgsConstructor;
 
 public class RecommendationDashboardResponse {
     private int serialNo;
+    private String recommendationId;
     private String keyword;
     private String[] synonyms;
     private List<String> urls;

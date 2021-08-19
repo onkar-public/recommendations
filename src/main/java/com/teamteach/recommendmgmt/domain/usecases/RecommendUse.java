@@ -98,6 +98,7 @@ public class RecommendUse implements IRecommendMgmt{
 				}
 				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
 															.serialNo(serialNo++)
+															.recommendationId(recommendation.getId())
 															.keyword(recommendation.getWord())
 															.synonyms(recommendation.getSynonyms())
 															.urls(urls)
@@ -112,10 +113,11 @@ public class RecommendUse implements IRecommendMgmt{
 
 	@Override
 		public ObjectResponseDto getRecommendation(String recommendationId) {
+			Recommendation recommendation = recommendDAL.getRecommendation(recommendationId);
 			return ObjectResponseDto.builder()
                     .success(true)
                     .message("Recommendation retrieved!")
-                    .object(null)
+                    .object(recommendation)
                     .build();
 		}
 }
