@@ -14,6 +14,7 @@ import com.teamteach.recommendmgmt.domain.responses.ObjectListResponseDto;
 import com.teamteach.recommendmgmt.domain.responses.ObjectResponseDto;
 import com.teamteach.recommendmgmt.domain.responses.RecommendResponse;
 import com.teamteach.recommendmgmt.domain.responses.RecommendationDashboardResponse;
+import com.teamteach.recommendmgmt.infra.persistence.dal.RecommendDAL;
 
 public class RecommendUse implements IRecommendMgmt{
 
@@ -22,6 +23,9 @@ public class RecommendUse implements IRecommendMgmt{
 
 	@Autowired
 	private JournalService journalService;
+
+	@Autowired
+	private RecommendDAL recommendDAL;
 
     @Override
 		public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand, String accessToken) {
@@ -80,10 +84,30 @@ public class RecommendUse implements IRecommendMgmt{
 
 	@Override
 		public ObjectListResponseDto<RecommendationDashboardResponse> getAllRecommendations() {
+			List<Recommendation> recommendations = recommendDAL.getAllRecommendations();
+			RecommendationDashboardResponse recommendationDashboardResponse;
+			int serialNo = 1;
+			List<Suggestion> suggestions;
+			List<String> urls;
+			List<RecommendationDashboardResponse> recommendationDashboardResponses = new ArrayList<>();
+			for(Recommendation recommendation : recommendations){
+				suggestions = recommendation.getSuggestions();
+				urls = new ArrayList<>();
+				for(Suggestion suggestion : suggestions){
+					urls.add(suggestion.getUrl());
+				}
+				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
+															.serialNo(serialNo++)
+															.keyword(recommendation.getWord())
+															.synonyms(recommendation.getSynonyms())
+															.urls(urls)
+															.build();
+				recommendationDashboardResponses.add(recommendationDashboardResponse);
+			}
 			return new ObjectListResponseDto<RecommendationDashboardResponse>(
                     true, 
                     "All recommendations retrieved successfully!", 
-                    null);
+                    recommendationDashboardResponses);
 		}
 
 	@Override

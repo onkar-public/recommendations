@@ -38,6 +38,12 @@ public class RecommendDAL  implements IRecommendRepository {
     }
 
     @Override
+    public List<Recommendation> getAllRecommendations(){
+        Query query = new Query();
+        return mongoTemplate.find(query, Recommendation.class);
+    }
+
+    @Override
     public ObjectListResponseDto<Category> getCategories() {
         Query query = new Query();
         List<Category> categories = mongoTemplate.find(query, Category.class);

@@ -2,6 +2,9 @@ package com.teamteach.recommendmgmt.domain.responses;
 
 import lombok.Builder;
 import lombok.Data;
+
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 
 @Data
@@ -12,5 +15,5 @@ public class RecommendationDashboardResponse {
     private int serialNo;
     private String keyword;
     private String[] synonyms;
-    private String[] urls;
+    private List<String> urls;
 }
