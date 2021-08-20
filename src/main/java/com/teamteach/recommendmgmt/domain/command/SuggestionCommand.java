@@ -10,8 +10,9 @@ import javax.validation.constraints.NotNull;
 @Data
 @NoArgsConstructor
 @Getter
-public class RecommendationCommand extends ValidatingCommand{
-    private String categoryId;
-    private String keyword;
-    private String[] synonyms;
+public class SuggestionCommand extends ValidatingCommand{
+    private String recommendationId;
+    private String message;
+    private String url;
+    private String userType;
 }

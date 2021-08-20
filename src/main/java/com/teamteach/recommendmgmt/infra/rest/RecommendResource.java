@@ -2,6 +2,7 @@ package com.teamteach.recommendmgmt.infra.rest;
 
 import com.teamteach.recommendmgmt.domain.command.RecommendCommand;
 import com.teamteach.recommendmgmt.domain.command.RecommendationCommand;
+import com.teamteach.recommendmgmt.domain.command.SuggestionCommand;
 import com.teamteach.recommendmgmt.domain.models.Category;
 import com.teamteach.recommendmgmt.domain.ports.in.IRecommendMgmt;
 import com.teamteach.recommendmgmt.domain.responses.ObjectListResponseDto;
@@ -44,6 +45,13 @@ class RecommendResource extends AbstractAppController implements IRecommendResou
     public ResponseEntity<ObjectResponseDto> storeRecommendation(@Valid RecommendationCommand recommendationCommand, HttpHeaders headers) {
         String token = headers.getFirst(HttpHeaders.AUTHORIZATION);
         return ResponseEntity.ok(recommendMgmt.storeRecommendation(recommendationCommand,token));
+    }
+
+    @Override
+    @ApiOperation(value = "Saves a suggestion for a recommendation", authorizations = { @Authorization(value="jwtToken") })
+    public ResponseEntity<ObjectResponseDto> storeSuggestion(@Valid SuggestionCommand suggestionCommand, HttpHeaders headers) {
+        String token = headers.getFirst(HttpHeaders.AUTHORIZATION);
+        return ResponseEntity.ok(recommendMgmt.storeSuggestion(suggestionCommand,token));
     }
 
     @Override

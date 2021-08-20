@@ -6,6 +6,7 @@ import java.util.*;
 
 import com.teamteach.recommendmgmt.domain.command.RecommendCommand;
 import com.teamteach.recommendmgmt.domain.command.RecommendationCommand;
+import com.teamteach.recommendmgmt.domain.command.SuggestionCommand;
 import com.teamteach.recommendmgmt.domain.models.Category;
 import com.teamteach.recommendmgmt.domain.models.Recommendation;
 import com.teamteach.recommendmgmt.domain.models.SequenceGeneratorService;
@@ -156,6 +157,16 @@ public class RecommendUse implements IRecommendMgmt{
 						.success(true)
 						.message("Recommendation Saved!")
 						.object(recommendation)
+						.build();
+		}
+
+	@Override
+		public ObjectResponseDto storeSuggestion(SuggestionCommand suggestionCommand, String accessToken){
+			
+			return ObjectResponseDto.builder()
+						.success(true)
+						.message("Suggestion Saved!")
+						.object(null)
 						.build();
 		}
 }
