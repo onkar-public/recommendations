@@ -50,6 +50,13 @@ public class RecommendDAL  implements IRecommendRepository {
     }
 
     @Override
+    public Category getCategory(String id) {
+        Query query = new Query(Criteria.where("_id").is(id));
+        Category category = mongoTemplate.findOne(query, Category.class);
+        return category;
+    }
+
+    @Override
     public ObjectListResponseDto<Category> getCategories() {
         Query query = new Query();
         List<Category> categories = mongoTemplate.find(query, Category.class);

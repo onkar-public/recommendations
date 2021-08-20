@@ -19,4 +19,5 @@ public class Suggestion {
 
     private String suggestion;
     private String url; 
+    private String userType;
 }

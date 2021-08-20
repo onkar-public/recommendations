@@ -14,6 +14,7 @@ import com.teamteach.recommendmgmt.domain.responses.ObjectListResponseDto;
 import com.teamteach.recommendmgmt.domain.responses.ObjectResponseDto;
 import com.teamteach.recommendmgmt.domain.responses.RecommendResponse;
 import com.teamteach.recommendmgmt.domain.responses.RecommendationDashboardResponse;
+import com.teamteach.recommendmgmt.domain.responses.RecommendationResponse;
 import com.teamteach.recommendmgmt.infra.persistence.dal.RecommendDAL;
 
 public class RecommendUse implements IRecommendMgmt{
@@ -114,10 +115,19 @@ public class RecommendUse implements IRecommendMgmt{
 	@Override
 		public ObjectResponseDto getRecommendation(String recommendationId) {
 			Recommendation recommendation = recommendDAL.getRecommendation(recommendationId);
+			Category category = recommendDAL.getCategory(recommendation.getCategoryId());
+			RecommendationResponse recommendationResponse = RecommendationResponse.builder()
+																	.recommendationId(recommendation.getId())
+																	.categoryId(recommendation.getCategoryId())
+																	.category(category.getTitle())
+																	.keyword(recommendation.getWord())
+																	.synonyms(recommendation.getSynonyms())
+																	.suggestions(recommendation.getSuggestions())
+																	.build();
 			return ObjectResponseDto.builder()
                     .success(true)
                     .message("Recommendation retrieved!")
-                    .object(recommendation)
+                    .object(recommendationResponse)
                     .build();
 		}
 }
