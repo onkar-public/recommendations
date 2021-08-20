@@ -32,6 +32,11 @@ public class RecommendDAL  implements IRecommendRepository {
     }
 
     @Override
+    public void saveRecommendation(Recommendation recommendation){
+        mongoTemplate.save(recommendation);
+    }
+
+    @Override
     public List<Recommendation> getRecommendations(String recommendationId) {
         Query query = new Query(Criteria.where("_id").is(recommendationId));
         return mongoTemplate.find(query, Recommendation.class);

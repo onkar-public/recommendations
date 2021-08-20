@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.*;
 
 import com.teamteach.recommendmgmt.domain.command.RecommendCommand;
+import com.teamteach.recommendmgmt.domain.command.RecommendationCommand;
 import com.teamteach.recommendmgmt.domain.models.Category;
 import com.teamteach.recommendmgmt.domain.models.Recommendation;
+import com.teamteach.recommendmgmt.domain.models.SequenceGeneratorService;
 import com.teamteach.recommendmgmt.domain.models.Suggestion;
 import com.teamteach.recommendmgmt.domain.ports.in.IRecommendMgmt;
 import com.teamteach.recommendmgmt.domain.ports.out.IRecommendRepository;
@@ -20,13 +22,16 @@ import com.teamteach.recommendmgmt.infra.persistence.dal.RecommendDAL;
 public class RecommendUse implements IRecommendMgmt{
 
 	@Autowired
-    private IRecommendRepository recommendRepository;
+    	private IRecommendRepository recommendRepository;
 
 	@Autowired
-	private JournalService journalService;
+		private JournalService journalService;
 
 	@Autowired
-	private RecommendDAL recommendDAL;
+		private RecommendDAL recommendDAL;
+
+	@Autowired
+        private SequenceGeneratorService sequenceGeneratorService;
 
     @Override
 		public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand, String accessToken) {
@@ -92,10 +97,14 @@ public class RecommendUse implements IRecommendMgmt{
 			List<String> urls;
 			List<RecommendationDashboardResponse> recommendationDashboardResponses = new ArrayList<>();
 			for(Recommendation recommendation : recommendations){
-				suggestions = recommendation.getSuggestions();
+				suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
 				urls = new ArrayList<>();
-				for(Suggestion suggestion : suggestions){
-					urls.add(suggestion.getUrl());
+				if(suggestions == null){
+					urls = null;
+				} else{
+					for(Suggestion suggestion : suggestions){
+						urls.add(suggestion.getUrl());
+					}
 				}
 				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
 															.serialNo(serialNo++)
@@ -116,18 +125,37 @@ public class RecommendUse implements IRecommendMgmt{
 		public ObjectResponseDto getRecommendation(String recommendationId) {
 			Recommendation recommendation = recommendDAL.getRecommendation(recommendationId);
 			Category category = recommendDAL.getCategory(recommendation.getCategoryId());
+			String titleCategory = category != null ? category.getTitle() : "Category Does not Exist";
+			List<Suggestion> suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
 			RecommendationResponse recommendationResponse = RecommendationResponse.builder()
 																	.recommendationId(recommendation.getId())
 																	.categoryId(recommendation.getCategoryId())
-																	.category(category.getTitle())
+																	.category(titleCategory)
 																	.keyword(recommendation.getWord())
 																	.synonyms(recommendation.getSynonyms())
-																	.suggestions(recommendation.getSuggestions())
+																	.suggestions(suggestions)
 																	.build();
 			return ObjectResponseDto.builder()
                     .success(true)
                     .message("Recommendation retrieved!")
                     .object(recommendationResponse)
                     .build();
+		}
+
+	@Override
+		public ObjectResponseDto storeRecommendation(RecommendationCommand recommendationCommand, String accessToken){
+			Recommendation recommendation = Recommendation.builder()
+													.id(sequenceGeneratorService.generateSequence(Recommendation.SEQUENCE_NAME))
+													.categoryId(recommendationCommand.getCategoryId())
+													.word(recommendationCommand.getKeyword())
+													.synonyms(recommendationCommand.getSynonyms())
+													.suggestions(null)
+													.build();
+			recommendDAL.saveRecommendation(recommendation);
+			return ObjectResponseDto.builder()
+						.success(true)
+						.message("Recommendation Saved!")
+						.object(recommendation)
+						.build();
 		}
 }

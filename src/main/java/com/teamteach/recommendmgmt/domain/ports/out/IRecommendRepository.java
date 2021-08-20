@@ -11,4 +11,5 @@ public interface IRecommendRepository {
    List<Recommendation> getAllRecommendations();
    Recommendation getRecommendation(String recommendationId);
    Category getCategory(String id);
+   void saveRecommendation(Recommendation recommendation);
 }
