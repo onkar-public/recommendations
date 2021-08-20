@@ -145,6 +145,15 @@ public class RecommendUse implements IRecommendMgmt{
 
 	@Override
 		public ObjectResponseDto storeRecommendation(RecommendationCommand recommendationCommand, String accessToken){
+			String keyword = recommendationCommand.getKeyword();
+			boolean exists = recommendDAL.ifRecommendationExists(keyword);
+			if(exists){
+				return ObjectResponseDto.builder()
+								.success(false)
+								.message("Recommendation for this keyword already exists!")
+								.object(null)
+								.build();
+			}
 			Recommendation recommendation = Recommendation.builder()
 													.id(sequenceGeneratorService.generateSequence(Recommendation.SEQUENCE_NAME))
 													.categoryId(recommendationCommand.getCategoryId())

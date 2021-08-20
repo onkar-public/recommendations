@@ -37,6 +37,14 @@ public class RecommendDAL  implements IRecommendRepository {
     }
 
     @Override
+    public boolean ifRecommendationExists(String keyword){
+        Query query = new Query(Criteria.where("word").is(keyword));
+        Recommendation recommendation = mongoTemplate.findOne(query, Recommendation.class);
+        if(recommendation != null) return true;
+        else return false;
+    }
+
+    @Override
     public List<Recommendation> getRecommendations(String recommendationId) {
         Query query = new Query(Criteria.where("_id").is(recommendationId));
         return mongoTemplate.find(query, Recommendation.class);

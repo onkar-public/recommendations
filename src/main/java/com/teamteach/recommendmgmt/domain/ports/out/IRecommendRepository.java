@@ -12,4 +12,5 @@ public interface IRecommendRepository {
    Recommendation getRecommendation(String recommendationId);
    Category getCategory(String id);
    void saveRecommendation(Recommendation recommendation);
+   boolean ifRecommendationExists(String keyword);
 }
