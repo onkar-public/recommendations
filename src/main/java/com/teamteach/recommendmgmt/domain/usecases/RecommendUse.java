@@ -171,11 +171,28 @@ public class RecommendUse implements IRecommendMgmt{
 
 	@Override
 		public ObjectResponseDto storeSuggestion(SuggestionCommand suggestionCommand, String accessToken){
-			
+			Recommendation recommendation = recommendDAL.getRecommendation(suggestionCommand.getRecommendationId());
+			if(recommendation == null){
+				return ObjectResponseDto.builder()
+						.success(false)
+						.message("Recommendation with ID does not exist!")
+						.object(null)
+						.build();
+			}
+			List<Suggestion> suggestions = recommendation.getSuggestions();
+			if(suggestions == null) suggestions = new ArrayList<>();
+			Suggestion suggestion = Suggestion.builder()
+											.suggestion(suggestionCommand.getMessage())
+											.url(suggestionCommand.getUrl())
+											.userType(suggestionCommand.getUserType())
+											.build();
+			suggestions.add(suggestion);
+			recommendation.setSuggestions(suggestions);
+			recommendDAL.saveRecommendation(recommendation);
 			return ObjectResponseDto.builder()
 						.success(true)
 						.message("Suggestion Saved!")
-						.object(null)
+						.object(recommendation)
 						.build();
 		}
 }
