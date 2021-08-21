@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Getter
 public class RecommendationCommand extends ValidatingCommand{
+    private String recommendationId;
     private String categoryId;
     private String keyword;
     private String[] synonyms;

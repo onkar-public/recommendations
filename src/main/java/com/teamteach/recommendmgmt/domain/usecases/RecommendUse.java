@@ -147,7 +147,7 @@ public class RecommendUse implements IRecommendMgmt{
 		public ObjectResponseDto storeRecommendation(RecommendationCommand recommendationCommand, String accessToken){
 			String keyword = recommendationCommand.getKeyword();
 			boolean exists = recommendDAL.ifRecommendationExists(keyword);
-			if(exists){
+			if(exists && recommendationCommand.getRecommendationId()==null){
 				return ObjectResponseDto.builder()
 								.success(false)
 								.message("Recommendation for this keyword already exists!")
@@ -161,6 +161,19 @@ public class RecommendUse implements IRecommendMgmt{
 													.synonyms(recommendationCommand.getSynonyms())
 													.suggestions(null)
 													.build();
+			if(recommendationCommand.getRecommendationId() != null){
+				Recommendation recommendationCheck = recommendDAL.getRecommendation(recommendationCommand.getRecommendationId());
+				if(recommendationCheck == null){
+					return ObjectResponseDto.builder()
+								.success(false)
+								.message("Recommendation does not exist!")
+								.object(null)
+								.build();
+				} else {
+					recommendation.setId(recommendationCommand.getRecommendationId());
+					recommendation.setSuggestions(recommendationCheck.getSuggestions());
+				}
+			}
 			recommendDAL.saveRecommendation(recommendation);
 			return ObjectResponseDto.builder()
 						.success(true)
