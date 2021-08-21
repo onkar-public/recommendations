@@ -179,14 +179,26 @@ public class RecommendUse implements IRecommendMgmt{
 						.object(null)
 						.build();
 			}
-			List<Suggestion> suggestions = recommendation.getSuggestions();
-			if(suggestions == null) suggestions = new ArrayList<>();
 			Suggestion suggestion = Suggestion.builder()
 											.suggestion(suggestionCommand.getMessage())
 											.url(suggestionCommand.getUrl())
 											.userType(suggestionCommand.getUserType())
 											.build();
-			suggestions.add(suggestion);
+			int suggestionIndex = 1;
+			List<Suggestion> suggestions = recommendation.getSuggestions();
+			if(suggestions == null){
+				suggestions = new ArrayList<>();
+				suggestion.setSuggestionIndex(suggestionIndex);
+				suggestions.add(suggestion);
+			} else if(suggestionCommand.getSuggestionIndex() != 0){
+				suggestionIndex = suggestionCommand.getSuggestionIndex();
+				suggestion.setSuggestionIndex(suggestionIndex);
+				suggestions.set(suggestionIndex-1, suggestion);
+			}	else{
+				suggestionIndex = suggestions.size()+1;
+				suggestion.setSuggestionIndex(suggestionIndex);
+				suggestions.add(suggestion);
+			}
 			recommendation.setSuggestions(suggestions);
 			recommendDAL.saveRecommendation(recommendation);
 			return ObjectResponseDto.builder()

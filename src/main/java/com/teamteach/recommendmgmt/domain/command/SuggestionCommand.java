@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 public class SuggestionCommand extends ValidatingCommand{
     private String recommendationId;
+    private int suggestionIndex;
     private String message;
     private String url;
     private String userType;

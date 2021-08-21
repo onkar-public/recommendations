@@ -16,7 +16,7 @@ import java.util.*;
 @AllArgsConstructor
 
 public class Suggestion {
-
+    private int suggestionIndex;
     private String suggestion;
     private String url; 
     private String userType;
