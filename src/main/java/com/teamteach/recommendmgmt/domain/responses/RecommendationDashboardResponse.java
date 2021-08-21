@@ -12,7 +12,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 
 public class RecommendationDashboardResponse {
-    private int serialNo;
+    private int id;
     private String recommendationId;
     private String keyword;
     private String[] synonyms;

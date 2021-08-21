@@ -108,7 +108,7 @@ public class RecommendUse implements IRecommendMgmt{
 					}
 				}
 				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
-															.serialNo(serialNo++)
+															.id(serialNo++)
 															.recommendationId(recommendation.getId())
 															.keyword(recommendation.getWord())
 															.synonyms(recommendation.getSynonyms())
