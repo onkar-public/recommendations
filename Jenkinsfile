@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         REPO = "333490196116.dkr.ecr.ap-south-1.amazonaws.com"
-        PROJECT = "teamteach-journals"
+        PROJECT = "teamteach-recommendations"
         USER = "ec2-user"
         DOMAIN = "myfamilycoach.ml"
     }
