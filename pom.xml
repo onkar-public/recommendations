@@ -186,7 +186,7 @@
 					<verbose>true</verbose>
 					<images>
 						<image>
-							<name>${project.groupId}-${project.artifactId}:{$branch}</name>
+							<name>${project.groupId}-${project.artifactId}:${branch}</name>
 							<build>
 								<from>openjdk:11-jre-slim-buster</from>
 								<entryPoint>
