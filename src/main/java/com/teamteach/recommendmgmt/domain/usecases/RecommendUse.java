@@ -54,6 +54,11 @@ public class RecommendUse implements IRecommendMgmt{
 				Recommendation recommendation = recommendations.get(0);
 				recommendationId = recommendation.getId();
 				List<Suggestion> suggestions = recommendation.getSuggestions();
+				if (suggestions == null) {
+					System.out.println("Invalid recommendation record");
+					System.out.println(recommendation);
+					suggestions = new ArrayList<>();
+				}
 				if (newIndex == -1) {
 					if (suggestions.size() > 0) {
 						newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
