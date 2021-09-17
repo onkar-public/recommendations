@@ -115,6 +115,7 @@ public class RecommendUse implements IRecommendMgmt{
 				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
 															.id(serialNo++)
 															.recommendationId(recommendation.getId())
+															.categoryId(recommendation.getCategoryId())
 															.keyword(recommendation.getWord())
 															.synonyms(recommendation.getSynonyms())
 															.urls(urls)

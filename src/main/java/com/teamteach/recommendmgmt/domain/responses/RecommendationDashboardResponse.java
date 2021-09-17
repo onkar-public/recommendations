@@ -14,6 +14,7 @@ import lombok.AllArgsConstructor;
 public class RecommendationDashboardResponse {
     private int id;
     private String recommendationId;
+    private String categoryId;
     private String keyword;
     private String[] synonyms;
     private List<String> urls;
