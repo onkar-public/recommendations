@@ -134,6 +134,10 @@ public class RecommendUse implements IRecommendMgmt{
 			Category category = recommendDAL.getCategory(recommendation.getCategoryId());
 			String titleCategory = category != null ? category.getTitle() : "Category Does not Exist";
 			List<Suggestion> suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
+			int i = 1;
+			for (Suggestion suggestion : suggestions) {
+				suggestion.setSuggestionIndex(i++);
+			}
 			RecommendationResponse recommendationResponse = RecommendationResponse.builder()
 																	.recommendationId(recommendation.getId())
 																	.categoryId(recommendation.getCategoryId())
