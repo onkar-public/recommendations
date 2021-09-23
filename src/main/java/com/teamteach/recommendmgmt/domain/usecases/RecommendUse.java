@@ -134,33 +134,22 @@ public class RecommendUse implements IRecommendMgmt{
 			Category category = recommendDAL.getCategory(recommendation.getCategoryId());
 			String titleCategory = category != null ? category.getTitle() : "Category Does not Exist";
 			List<Suggestion> suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
-			int i = 1;
-			for (Suggestion suggestion : suggestions) {
-				suggestion.setSuggestionIndex(i++);
+			List<Suggestion> revSuggestionsList = new ArrayList<>();
+			Suggestion suggestion = null;
+			for(int i = suggestions.size(); i > 0; i--) {
+				suggestion = suggestions.get(i-1);
+				suggestion.setSuggestionIndex(i);
+				revSuggestionsList.add(suggestion);
 			}
-			
-			Comparator<Suggestion> comp = new Comparator<>(){
-				@Override
-				public int compare(Suggestion o1, Suggestion o2) {
-					int res = 0;
-					if(o1.getSuggestionIndex() < o2.getSuggestionIndex()){
-						res = 1;
-					}
-					if(o1.getSuggestionIndex() > o2.getSuggestionIndex()){
-						res = -1;
-					}
-					return res;
-				}
-			};
-			Collections.sort(suggestions,comp);
 
+			
 			RecommendationResponse recommendationResponse = RecommendationResponse.builder()
 																	.recommendationId(recommendation.getId())
 																	.categoryId(recommendation.getCategoryId())
 																	.category(titleCategory)
 																	.keyword(recommendation.getWord())
 																	.synonyms(recommendation.getSynonyms())
-																	.suggestions(suggestions)
+																	.suggestions(revSuggestionsList)
 																	.build();
 			return ObjectResponseDto.builder()
                     .success(true)
