@@ -138,6 +138,7 @@ public class RecommendUse implements IRecommendMgmt{
 			Suggestion suggestion = null;
 			for(int i = suggestions.size(); i > 0; i--) {
 				suggestion = suggestions.get(i-1);
+				if (suggestion.getUserType() == null) suggestion.setUserType("Parent");
 				suggestion.setSuggestionIndex(i);
 				revSuggestionsList.add(suggestion);
 			}
