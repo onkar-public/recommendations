@@ -94,10 +94,6 @@ public class RecommendUse implements IRecommendMgmt{
 			return recommendRepository.getCategories();
 		}
 
-	private Category getCategoryById(String categoryId){
-		return recommendDAL.getCategoryById(categoryId);
-	}
-
 	@Override
 		public ObjectListResponseDto<RecommendationDashboardResponse> getAllRecommendations() {
 			List<Recommendation> recommendations = recommendDAL.getAllRecommendations();
@@ -107,7 +103,10 @@ public class RecommendUse implements IRecommendMgmt{
 			List<String> urls;
 			String catTitle = null;
 			Map<String, String> categoryMap = new HashMap<String, String>();
-
+			
+			for (Category category : recommendDAL.getAllCategories()) {
+				categoryMap.put(category.getCategoryId(), category.getTitle());
+			}
 			List<RecommendationDashboardResponse> recommendationDashboardResponses = new ArrayList<>();
 			for(Recommendation recommendation : recommendations){
 				suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
@@ -119,15 +118,7 @@ public class RecommendUse implements IRecommendMgmt{
 						urls.add(suggestion.getUrl());
 					}
 				}
-				// if(recommendation.getCategoryId()!=null){
-				// 	cat=getCategoryById(recommendation.getCategoryId());
-				// }
-				if(!categoryMap.containsKey(recommendation.getCategoryId())){
-					categoryMap.put(recommendation.getCategoryId(), 
-					getCategoryById(recommendation.getCategoryId())!=null
-					? getCategoryById(recommendation.getCategoryId()).getTitle()
-					: "");
-				}
+
 				catTitle = categoryMap.get(recommendation.getCategoryId());
 				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
 															.id(serialNo++)
