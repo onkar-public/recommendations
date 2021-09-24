@@ -8,6 +8,7 @@ public interface IRecommendRepository {
    List<Recommendation> getRecommend(String[] words);
    List<Recommendation> getRecommendations(String recommendationId);
    ObjectListResponseDto<Category> getCategories();
+   List<Category> getAllCategories();
    List<Recommendation> getAllRecommendations();
    Recommendation getRecommendation(String recommendationId);
    Category getCategory(String id);

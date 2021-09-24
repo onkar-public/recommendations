@@ -101,6 +101,12 @@ public class RecommendUse implements IRecommendMgmt{
 			int serialNo = 1;
 			List<Suggestion> suggestions;
 			List<String> urls;
+			String catTitle = null;
+			Map<String, String> categoryMap = new HashMap<String, String>();
+			
+			for (Category category : recommendDAL.getAllCategories()) {
+				categoryMap.put(category.getCategoryId(), category.getTitle());
+			}
 			List<RecommendationDashboardResponse> recommendationDashboardResponses = new ArrayList<>();
 			for(Recommendation recommendation : recommendations){
 				suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
@@ -112,10 +118,13 @@ public class RecommendUse implements IRecommendMgmt{
 						urls.add(suggestion.getUrl());
 					}
 				}
+
+				catTitle = categoryMap.get(recommendation.getCategoryId());
 				recommendationDashboardResponse = RecommendationDashboardResponse.builder()
 															.id(serialNo++)
 															.recommendationId(recommendation.getId())
 															.categoryId(recommendation.getCategoryId())
+															.categoryTitle(catTitle != null ? catTitle:"")
 															.keyword(recommendation.getWord())
 															.synonyms(recommendation.getSynonyms())
 															.urls(urls)
