@@ -126,6 +126,7 @@ public class RecommendUse implements IRecommendMgmt{
 															.recommendationId(recommendation.getId())
 															.categoryId(recommendation.getCategoryId())
 															.categoryTitle(catTitle != null ? catTitle:"")
+															.suggestions(recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null)
 															.keyword(recommendation.getWord())
 															.synonyms(recommendation.getSynonyms())
 															.urls(urls)

@@ -6,6 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
+import com.teamteach.recommendmgmt.domain.models.Suggestion;
 
 @Data
 @Builder
@@ -19,4 +20,5 @@ public class RecommendationDashboardResponse {
     private String keyword;
     private String[] synonyms;
     private List<String> urls;
+    private List<Suggestion> suggestions;
 }
