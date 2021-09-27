@@ -49,6 +49,7 @@ public class RecommendUse implements IRecommendMgmt{
 				}
 			} else {
 				recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
+				System.out.println(recommendations);
 			}
 			if (recommendations != null && !recommendations.isEmpty()) {
 				Recommendation recommendation = recommendations.get(0);
