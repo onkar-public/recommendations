@@ -38,35 +38,27 @@ public class RecommendUse implements IRecommendMgmt{
 		public ObjectResponseDto findRecommendation(RecommendCommand recommendCommand, String accessToken) {
 			List<Recommendation> recommendations = null;
 			int newIndex = -1;
-			System.out.println(recommendCommand);
 			String recommendationId = recommendCommand.getRecommendationId();
 			if (recommendationId != null && !recommendationId.equals("0")) {
 				recommendations = recommendRepository.getRecommendations(recommendationId);
-				System.out.println(recommendations);
 				if (recommendCommand.getSuggestionIndex() != null) {
 					newIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
-					System.out.println("1: "+newIndex);
 				} else {
 					newIndex = 0;
-					System.out.println("2: "+newIndex);
 				}
 			} else {
 				recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
-				System.out.println(recommendations);
 			}
 			if (recommendations != null && !recommendations.isEmpty()) {
 				Recommendation recommendation = recommendations.get(0);
 				recommendationId = recommendation.getId();
 				List<Suggestion> suggestions = recommendation.getSuggestions();
 				if (suggestions == null) {
-					System.out.println("Invalid recommendation record");
-					System.out.println(recommendation);
 					suggestions = new ArrayList<>();
 				}
 				if (newIndex == -1) {
 					if (suggestions.size() > 0) {
 						newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
-						System.out.println("3: "+newIndex);
 						newIndex = (newIndex+1) % suggestions.size();	
 					} else {
 						newIndex = 0;
