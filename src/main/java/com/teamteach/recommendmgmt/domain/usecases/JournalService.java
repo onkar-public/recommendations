@@ -37,11 +37,11 @@ public class JournalService {
                 String suggestionIndex = journalEntry.get("suggestionIndex").asText();
                 return Integer.valueOf(suggestionIndex);
             } else {
-                return 0;
+                return -1;
             }
         }
         catch (IOException e) {
-            return 0;
+            return -1;
         }
     }    
 }
