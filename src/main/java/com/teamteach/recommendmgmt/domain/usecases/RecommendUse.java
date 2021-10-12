@@ -44,7 +44,7 @@ public class RecommendUse implements IRecommendMgmt{
 				if (recommendCommand.getSuggestionIndex() != null) {
 					newIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
 				} else {
-					newIndex = 0;
+					newIndex = 1;
 				}
 			} else {
 				recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
@@ -61,15 +61,15 @@ public class RecommendUse implements IRecommendMgmt{
 						newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
 						newIndex = (newIndex+1) % suggestions.size();	
 					} else {
-						newIndex = 0;
+						newIndex = 1;
 					}
 				}
 				String suggestionIndex = String.valueOf(newIndex);
 				String suggestion = "";
 				String url = "";
 				if (suggestions.size() > 0) {
-					url = suggestions.get(newIndex).getUrl();
-					suggestion = suggestions.get(newIndex).getSuggestion();
+					url = suggestions.get(newIndex-1).getUrl();
+					suggestion = suggestions.get(newIndex-1).getSuggestion();
 				}
 				String categoryId = recommendation.getCategoryId();
 				return ObjectResponseDto.builder()
