@@ -54,8 +54,6 @@ public class RecommendUse implements IRecommendMgmt{
 				recommendationId = recommendation.getId();
 				List<Suggestion> suggestions = recommendation.getSuggestions();
 				if (suggestions == null) {
-					System.out.println("Invalid recommendation record");
-					System.out.println(recommendation);
 					suggestions = new ArrayList<>();
 				}
 				if (newIndex == -1) {
@@ -70,6 +68,7 @@ public class RecommendUse implements IRecommendMgmt{
 				String suggestion = "";
 				String url = "";
 				if (suggestions.size() > 0) {
+					System.out.println("newIndex: "+suggestionIndex);
 					url = suggestions.get(newIndex).getUrl();
 					suggestion = suggestions.get(newIndex).getSuggestion();
 				}

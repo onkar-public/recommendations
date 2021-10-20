@@ -20,4 +20,5 @@ app:
     key:
       keytype: shared
       signingsecret: fe80::6184:62f1:2b9e:5b8313:8666:1qaz
+gateway.url: "https://dev.digisherpa.ai"
 
