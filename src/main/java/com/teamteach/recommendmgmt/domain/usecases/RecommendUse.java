@@ -41,7 +41,6 @@ public class RecommendUse implements IRecommendMgmt{
 			String recommendationId = recommendCommand.getRecommendationId();
 			if (recommendationId != null && !recommendationId.equals("0")) {
 				recommendations = recommendRepository.getRecommendations(recommendationId);
-				System.out.println(recommendations);
 				if (recommendCommand.getSuggestionIndex() != null) {
 					newIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
 				} else {
@@ -49,7 +48,6 @@ public class RecommendUse implements IRecommendMgmt{
 				}
 			} else {
 				recommendations = recommendRepository.getRecommend(recommendCommand.getText().split(" "));
-				System.out.println(recommendations);
 			}
 			if (recommendations != null && !recommendations.isEmpty()) {
 				Recommendation recommendation = recommendations.get(0);
