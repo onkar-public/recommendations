@@ -27,7 +27,6 @@ public class RecommendDAL  implements IRecommendRepository {
         TextCriteria criteria = TextCriteria.forDefaultLanguage().matchingAny(words);
 
         Query query = TextQuery.queryText(criteria);
-        System.out.println(query);
         return mongoTemplate.find(query, Recommendation.class);
     }
 
