@@ -41,7 +41,7 @@ public class RecommendUse implements IRecommendMgmt{
 			String recommendationId = recommendCommand.getRecommendationId();
 			if (recommendationId != null && !recommendationId.equals("0")) {
 				recommendations = recommendRepository.getRecommendations(recommendationId);
-				if (recommendCommand.getSuggestionIndex() != null) {
+				if (recommendCommand.getSuggestionIndex() != null && !recommendCommand.getSuggestionIndex().isEmpty()) {
 					newIndex = Integer.parseInt(recommendCommand.getSuggestionIndex());
 				} else {
 					newIndex = 0;
