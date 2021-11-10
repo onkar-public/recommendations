@@ -67,7 +67,7 @@ public class RecommendUse implements IRecommendMgmt{
 				String suggestionIndex = String.valueOf(newIndex);
 				String suggestion = "";
 				String url = "";
-				if (suggestions.size() > 0) {
+				if (suggestions.size() > 0 && suggestions.size() > newIndex) {
 					System.out.println(recommendationId + " --> " + newIndex);
 					url = suggestions.get(newIndex).getUrl();
 					suggestion = suggestions.get(newIndex).getSuggestion();
