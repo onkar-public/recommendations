@@ -179,7 +179,10 @@ public class RecommendUse implements IRecommendMgmt{
 								.build();
 			}
 			//String sentence = String.join(" ", recommendationCommand.getSynonyms());
+			if(!String.join(" ", recommendationCommand.getSynonyms()).equals("")){
 			List<Recommendation> recommendations = recommendRepository.getRecommend(recommendationCommand.getSynonyms());
+		
+			
 			if (recommendations.size() > 0) {
 				return ObjectResponseDto.builder()
 										.success(false)
@@ -187,6 +190,7 @@ public class RecommendUse implements IRecommendMgmt{
 										.object(null)
 										.build();
 			}
+		}
 			Recommendation recommendation = Recommendation.builder()
 													.id(sequenceGeneratorService.generateSequence(Recommendation.SEQUENCE_NAME))
 													.categoryId(recommendationCommand.getCategoryId())
