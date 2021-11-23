@@ -178,6 +178,15 @@ public class RecommendUse implements IRecommendMgmt{
 								.object(null)
 								.build();
 			}
+			//String sentence = String.join(" ", recommendationCommand.getSynonyms());
+			List<Recommendation> recommendations = recommendRepository.getRecommend(recommendationCommand.getSynonyms());
+			if (recommendations.size() > 0) {
+				return ObjectResponseDto.builder()
+										.success(false)
+										.message("One or more synonyms already exist in another recommendation!")
+										.object(null)
+										.build();
+			}
 			Recommendation recommendation = Recommendation.builder()
 													.id(sequenceGeneratorService.generateSequence(Recommendation.SEQUENCE_NAME))
 													.categoryId(recommendationCommand.getCategoryId())
