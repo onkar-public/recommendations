@@ -30,7 +30,7 @@ pipeline {
                 expression { env.GIT_BRANCH == env.BRANCH_TWO }
             } }
             steps {
-		sh "docker ps --format '{{.Status}}       \t{{ .Names }}' | grep teamteach"
+		sh "docker ps --format '{{.Status}}       \t{{ .Names }}' | grep ${PROJECT}"
                 sh 'docker tag ${PROJECT}:${GIT_BRANCH} ${REPO}:${GIT_BRANCH}'
                 sh '$($ECR_LOGIN)'
                 sh "docker push ${REPO}:${GIT_BRANCH}"
