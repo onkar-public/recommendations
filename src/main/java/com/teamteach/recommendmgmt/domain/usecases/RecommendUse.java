@@ -56,7 +56,7 @@ public class RecommendUse implements IRecommendMgmt{
 				if (suggestions == null) {
 					suggestions = new ArrayList<>();
 				}
-				if (newIndex == -1) {
+				if (newIndex == -1 && suggestions.size() > 0) {
 					if (suggestions.size() > 0) {
 						newIndex = journalService.getLastSuggestionIndex(recommendationId, accessToken);
 						newIndex = (newIndex+1) % suggestions.size();	
@@ -144,12 +144,14 @@ public class RecommendUse implements IRecommendMgmt{
 			List<Suggestion> suggestions = recommendation.getSuggestions() != null ? recommendation.getSuggestions() : null;
 			List<Suggestion> revSuggestionsList = new ArrayList<>();
 			Suggestion suggestion = null;
+		if(suggestions != null){
 			for(int i = suggestions.size(); i > 0; i--) {
 				suggestion = suggestions.get(i-1);
 				if (suggestion.getUserType() == null) suggestion.setUserType("Parent");
 				suggestion.setSuggestionIndex(i);
 				revSuggestionsList.add(suggestion);
 			}
+		}
 
 			
 			RecommendationResponse recommendationResponse = RecommendationResponse.builder()
